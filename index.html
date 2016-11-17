@@ -28,11 +28,17 @@
 
 
             for (let i = 0; i < 5; i++) {
+                var r = Math.floor(Math.random() * (256));
+                var g = Math.floor(Math.random() * (256));
+                var b = Math.floor(Math.random() * (256));
+                var c = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+
+
                 var left = 0;
                 var bot = 0;
                 var timer = 0;
                 if (i % 2 == 0) {
-                    var color = 'white';
+                    var color = c;
                 } else {
                     var color = 'red';
                 }
@@ -44,7 +50,7 @@
                 timer += 2000;
                 left += 50;
                 bot += 100;
-                var color = 'red';
+
                 setTimeout(DivCreat, timer, left, bot, color);
                 timer += 2000;
                 left += 50;
@@ -53,6 +59,7 @@
                 timer += 2000;
                 left += 50;
                 bot += 100;
+
                 setTimeout(DivCreat, timer, left, bot, color);
                 timer += 2000;
                 left += 50;
