@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+
+            DivCreat = function (l, b, color) {
+
+
+                div = document.createElement('div');
+                document.body.appendChild(div);
+                div.setAttribute('class', 'block');
+
+
+                setTimeout(function () {
+                        div.setAttribute('style', 'left:' + l + 'px; bottom:' + b + 'px; background-color:' + color);
+                    },
+                    1000);
+
+
+
+
+
+            }
+
+
+            for (let i = 0; i < 5; i++) {
+                var left = 0;
+                var bot = 0;
+                var timer = 0;
+                if (i % 2 == 0) {
+                    var color = 'white';
+                } else {
+                    var color = 'red';
+                }
+                setTimeout(DivCreat, timer, left, bot, color);
+                timer += 2000;
+                left += 50;
+                bot += 100;
+                setTimeout(DivCreat, timer, left, bot, color);
+                timer += 2000;
+                left += 50;
+                bot += 100;
+                var color = 'red';
+                setTimeout(DivCreat, timer, left, bot, color);
+                timer += 2000;
+                left += 50;
+                bot += 100;
+                setTimeout(DivCreat, timer, left, bot, color);
+                timer += 2000;
+                left += 50;
+                bot += 100;
+                setTimeout(DivCreat, timer, left, bot, color);
+                timer += 2000;
+                left += 50;
+                bot += 100;
+
+
+            }
+
+
+
+
+
+
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+</body>
+
+</html>

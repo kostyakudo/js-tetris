@@ -1,0 +1,16 @@
+.block {
+    position: fixed;
+    left: 50%;
+    bottom: 50%;
+    width: 150px;
+    height: 50px;
+    background-color: aquamarine;
+    transition: all 1s ease;
+}
+
+body {
+    margin: 0 auto;
+    width: 1000px;
+    height: 1000px;
+    background-color: black;
+}
