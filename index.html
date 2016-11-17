@@ -25,45 +25,40 @@
 
 
             }
+            var timer = 0;
+            var left = 0;
+            var bot = 0;
 
 
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 12; i++) {
                 var r = Math.floor(Math.random() * (256));
                 var g = Math.floor(Math.random() * (256));
                 var b = Math.floor(Math.random() * (256));
                 var c = '#' + r.toString(16) + g.toString(16) + b.toString(16);
 
 
-                var left = 0;
-                var bot = 0;
-                var timer = 0;
+
                 if (i % 2 == 0) {
                     var color = c;
                 } else {
-                    var color = 'red';
+                    var rr = Math.floor(Math.random() * (256));
+                    var gg = Math.floor(Math.random() * (256));
+                    var bb = Math.floor(Math.random() * (256));
+                    var cc = '#' + rr.toString(16) + gg.toString(16) + bb.toString(16);
+                    var color = cc;
                 }
                 setTimeout(DivCreat, timer, left, bot, color);
-                timer += 2000;
-                left += 50;
-                bot += 100;
-                setTimeout(DivCreat, timer, left, bot, color);
-                timer += 2000;
-                left += 50;
-                bot += 100;
 
-                setTimeout(DivCreat, timer, left, bot, color);
                 timer += 2000;
-                left += 50;
-                bot += 100;
-                setTimeout(DivCreat, timer, left, bot, color);
-                timer += 2000;
-                left += 50;
-                bot += 100;
+                left += 0;
+                bot += 50;
+                if (i > 3) {
+                    left = 150;
 
-                setTimeout(DivCreat, timer, left, bot, color);
-                timer += 2000;
-                left += 50;
-                bot += 100;
+
+                }
+
+
 
 
             }
