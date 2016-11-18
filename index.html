@@ -9,14 +9,14 @@
 
             DivCreat = function (l, b, color) {
 
-
+ console.log(i);
                 div = document.createElement('div');
                 document.body.appendChild(div);
                 div.setAttribute('class', 'block');
 
 
                 setTimeout(function () {
-                        console.log(i);
+                       
                         div.setAttribute('style', 'left:' + l + 'px; bottom:' + b + 'px; background-color:' + color);
                     },
                     1000);
